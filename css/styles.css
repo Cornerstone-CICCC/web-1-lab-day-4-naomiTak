@@ -51,5 +51,23 @@ body {
   flex: 1;
   padding: 0.25rem;
 }
+.container table thead {
+  background-color: lightgray;
+}
+.container table thead th {
+  padding: 10px 30px;
+}
+.container table tbody th {
+  padding: 10px 30px;
+}
+.container table tbody th img {
+  width: 80px;
+}
+.container table tbody tr:nth-child(2n+1) {
+  background-color: rgb(230, 230, 230);
+}
+.container table tbody tr:nth-child(2n) {
+  background-color: rgb(245, 245, 245);
+}
 
 /*# sourceMappingURL=styles.css.map */
