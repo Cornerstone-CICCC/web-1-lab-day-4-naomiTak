@@ -51,22 +51,25 @@ body {
   flex: 1;
   padding: 0.25rem;
 }
-.container table thead {
+.container #employees {
+  margin-left: 30px;
+}
+.container #employees table thead {
   background-color: lightgray;
 }
-.container table thead th {
-  padding: 10px 30px;
+.container #employees table thead th {
+  padding: 10px 20px;
 }
-.container table tbody th {
-  padding: 10px 30px;
+.container #employees table tbody th {
+  padding: 10px 20px;
 }
-.container table tbody th img {
+.container #employees table tbody th img {
   width: 80px;
 }
-.container table tbody tr:nth-child(2n+1) {
+.container #employees table tbody tr:nth-child(2n+1) {
   background-color: rgb(230, 230, 230);
 }
-.container table tbody tr:nth-child(2n) {
+.container #employees table tbody tr:nth-child(2n) {
   background-color: rgb(245, 245, 245);
 }
 
