@@ -56,25 +56,28 @@ body {
       }
     }
   }
-  table{
-    thead{
-      background-color: lightgray;
-      th{
-        padding: 10px 30px;
-      }
-    }
-    tbody{
-      th{
-        padding: 10px 30px;
-        img{
-          width: 80px;
+  #employees{
+    margin-left: 30px;;
+    table{
+      thead{
+        background-color: lightgray;
+        th{
+          padding: 10px 20px;
         }
       }
-      tr:nth-child(2n+1){
-        background-color: rgb(230, 230, 230)
-      }
-      tr:nth-child(2n){
-        background-color: rgb(245, 245, 245)
+      tbody{
+        th{
+          padding: 10px 20px;
+          img{
+            width: 80px;
+          }
+        }
+        tr:nth-child(2n+1){
+          background-color: rgb(230, 230, 230)
+        }
+        tr:nth-child(2n){
+          background-color: rgb(245, 245, 245)
+        }
       }
     }
   }

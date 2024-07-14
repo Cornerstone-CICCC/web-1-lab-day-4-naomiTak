@@ -1,23 +1,22 @@
+//email pattern
+//confirmation
 const submit = document.querySelector("form");
-console.log(submit);
 
 submit.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const forminfo = document.querySelector("form");
     const firstname = document.querySelector("#firstname");
     const lastname = document.querySelector("#lastname");
     const email = document.querySelector("#email");
     const hiredate = document.querySelector("#hire_date");
-    const date  = new FormData(submit);
     const profilephoto = document.querySelector("#profilephoto");
 
     const tr = document.createElement("tr");
 
     const thphoto = document.createElement("th");
     const photo = document.createElement("img");
-    console.log(profilephoto.files[0]);
     photo.setAttribute("src", profilephoto.files[0] ? `./images/${profilephoto.files[0].name}`: "");
-    //thphoto.innerText = profilephoto.files[0] ? "true": "false";
     thphoto.appendChild(photo);
 
     const thfirstname = document.createElement("th");
@@ -30,10 +29,18 @@ submit.addEventListener("submit", (e) => {
     themail.innerText = email.value;
 
     const thdate = document.createElement("th");
+    thdate.innerText = hiredate.value;
 
     const thbtn = document.createElement("th");
     const deletebtn = document.createElement("button");
     deletebtn.innerText = "Delete"
+    thbtn.appendChild(deletebtn);
+
+    deletebtn.addEventListener('click', () => {
+        const deletetr = deletebtn.closest("tr");
+        deletetr.remove();
+    });
+
     thbtn.appendChild(deletebtn);
 
     tr.appendChild(thphoto);
@@ -42,8 +49,9 @@ submit.addEventListener("submit", (e) => {
     tr.appendChild(themail);
     tr.appendChild(thdate);
     tr.appendChild(thbtn);
-    console.log(tr);
     
     document.getElementById('employeeList').appendChild(tr);
+
+    forminfo.reset();
     
 });
